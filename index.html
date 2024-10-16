@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      canvas {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+      }
+
+      form {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 50vw;
+        height: 2rem;
+        z-index: 2;
+        background: rgba(0, 0, 0, 0);
+      }
+
+      form input {
+        height: 100%;
+        width: calc(100% - 5rem);
+        background: rgba(0, 0, 0, 0);
+        outline: none;
+        border: 1px solid white;
+        border-left: none;
+        color: white;
+      }
+      form button {
+        color: white;
+        border: 1px solid white;
+        outline: none;
+        height: 100%;
+        width: 4rem;
+        background: rgba(0, 0, 0, 0);
+      }
+    </style>
+    <title>Color Grading GSplats</title>
+  </head>
+  <body>
+    <form id="loadSplat">
+      <input
+        type="text"
+        name="url"
+        value="https://assets.babylonjs.com/splats/gs_Sqwakers_trimed.splat"
+      />
+      <button type="submit">Load</button>
+    </form>
+    <canvas id="blon"></canvas>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
